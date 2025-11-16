@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimplyPath | Life Prioritization</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">Purposeful Planning</p>
+        <h1>Align your days with what matters most.</h1>
+        <p>
+          SimplyPath helps you anchor daily actions to your belief framework, core
+          skills, and permissible pursuits. Organize tasks, capture key
+          subtasks, and keep every priority visible at a glance.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h2>How the framework works</h2>
+        <p>
+          Add the practices that renew your beliefs, the core skills that fuel
+          your calling, and the permissible interests that enrich your life.
+          Each priority can include descriptive notes along with actionable
+          subtasks.
+        </p>
+      </section>
+
+      <section id="categories" class="categories" aria-live="polite"></section>
+    </main>
+
+    <template id="task-template">
+      <article class="task" data-task-id="">
+        <header>
+          <div>
+            <h3></h3>
+            <p class="task__description"></p>
+          </div>
+          <div class="task__actions">
+            <label class="task__toggle">
+              <input type="checkbox" class="task-complete" />
+              <span>Done</span>
+            </label>
+            <button type="button" class="btn btn--ghost delete-task">
+              Remove
+            </button>
+          </div>
+        </header>
+        <ul class="subtasks"></ul>
+      </article>
+    </template>
+
+    <template id="subtask-template">
+      <li class="subtask" data-subtask-id="">
+        <label>
+          <input type="checkbox" class="subtask-toggle" />
+          <span></span>
+        </label>
+      </li>
+    </template>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
